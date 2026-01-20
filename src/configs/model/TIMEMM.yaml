@@ -1,0 +1,25 @@
+embedding_size: [64]
+feat_embed_dim: 64
+
+n_mm_layers: 1
+num_layers: [2]
+knn_k: [10]
+mm_image_weight: 0.1
+num_freq_bands: [3]
+aggr_mode: ['add']
+tau_age_list : [[4.0, 6.0, 10.0]]
+learning_rate: [0.0001]
+aux_weight : [1e-2]
+reg_weight1 : [1e-3]
+reg_weight2 : [1e-1]
+use_age : [True] 
+use_gap : [False]
+transform : ['exp']
+use_corr : [True]
+use_var_floor : [False]
+var_floor : [1e-3]
+var_weight : [0.1]
+#
+use_time_weight: True
+TIME_FIELD: timestamp
+hyper_parameters: ["embedding_size","knn_k", "aggr_mode", "reg_weight", "learning_rate","tau_age_list","num_layers","num_freq_bands","aux_weight", "reg_weight1", "reg_weight2", "use_age","use_gap","transform","use_corr","use_var_floor","var_floor","var_weight"]
