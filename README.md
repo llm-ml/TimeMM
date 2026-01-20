@@ -25,7 +25,7 @@ conda env create -f environment.yaml
 conda activate mmrec
 ```
 
-### Option B: Install from `environment.txt` (explicit spec)
+### Option B: Install from `environment.txt`
 
 ```bash
 conda create -n mmrec --file environment.txt
@@ -71,10 +71,10 @@ sh run_games.sh
 
 ## Notes and Suggestions
 
-- **Timestamp quality matters.** Please ensure your dataset contains high-quality timestamps. The cleaner and more reliable the timestamps, the more significant the gains from TimeMM. In our industrial dataset with high-quality timestamps, the improvements are particularly strong. For datasets with noisy, irregular, or extremely sparse timestamps, the benefit may be limited.
+- **Timestamp quality matters.** Please ensure your dataset contains high-quality timestamps. The cleaner and more reliable the timestamps, the more significant the gains from TimeMM. In our real industrial dataset with high-quality timestamps, the improvements are particularly strong. For datasets with noisy, irregular, or extremely sparse timestamps, the benefit may be limited.
 - **Timestamp scale.** Our example uses second-level timestamps. If your dataset spans a very long horizon, consider rescaling timestamps or filtering samples with excessively large spans based on your task needs.
 - **Dataset-specific tuning.** Timestamp distributions and span statistics differ substantially across datasets. Please tune hyperparameters per dataset. The default configuration is a reasonable average-case setting, but it is not guaranteed to be optimal everywhere.
-- **Multi-granularity timestamps in practice.** In real online settings, we also observed strong gains when timestamps mix multiple granularities (seconds/days/weeks/months). TimeMM remains effective under such multi-scale temporal signals.
+- **Multi-granularity timestamps in practice.** In our real industrial online experiments, we also observed strong gains when timestamps mix multiple granularities (seconds/days/weeks/months). TimeMM remains effective under such multi-scale temporal signals.
 - **Reproducibility.** In principle, the absolute reproduction gap should not exceed 0.2%–0.3%. If performance varies widely across datasets, please first check timestamp quality and dataset integrity.
 
 If you have any questions, please try to contact us in authorship order first.
