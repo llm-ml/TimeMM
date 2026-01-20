@@ -18,7 +18,7 @@ To address these limitations, we propose **TimeMM**, a **time-conditioned spectr
 
 We provide two options to set up the conda environment.
 
-### Option A: Install from `environment.yaml` (recommended)
+### Option A: Install from `environment.yaml`
 
 ```bash
 conda env create -f environment.yaml
